@@ -4,6 +4,14 @@ def add(x, y):
 def subtract(x, y):
     return x - y
 
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
+        raise ValueError("Cannot divide by zero!")
+    return x / y
+
 def main():
     print("Simple Calculator")
     print("----------------")
@@ -21,6 +29,12 @@ def main():
 
             if op == '+':
                 result = add(x, y)
+            elif op == '-':
+                result = subtract(x, y)
+            elif op == '*':
+                result = multiply(x, y)
+            elif op == '/':
+                result = divide(x, y)
             else:
                 print("Invalid operation!")
                 continue
